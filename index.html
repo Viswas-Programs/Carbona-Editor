@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Carbona Text Editor</title>
+    <link rel="stylesheet" href="page/styles/output.css">
+    <!-- <style>
+            body {
+                background-color: 
+            }
+    </style> -->
+</head>
+
+<!-- <body class="w-full h-full"></body> -->
+<body >
+    <tab-group new-tab-button="true" sortable="true">
+        <style>
+            :host {
+                --tw-bg-opacity : 1;
+                --tabgroup-background: rgba(var(--ctp-crust), 1);
+                --tab-color: rgba(var(--ctp-subtext0), 1);
+                --tab-background: rgba(var(--ctp-sutface1), 1);
+                --tab-border-color: rgba(var(--ctp-surface1), 0);
+                --tab-font-family: Fira Code;
+                --tab-active-color: rgba(var(--ctp-text), 1);
+                --tab-active-background: rgba(var(--ctp-surface0), 1);
+                --tab-hover-color: rgba(var(--ctp-subtext0), 1);
+                --tab-hover-background: rgba(var(--ctp-surface1), 1)
+            }
+
+        </style>
+    </tab-group>
+    <script src="node_modules/electron-tabs/dist/electron-tabs.js"></script>
+    <script>
+        const tabGroup = document.querySelector("tab-group")
+        tabGroup.setDefaultTab({
+            title: "New Tab",
+            src : "page/welcome.html"
+        })
+
+        const welcomeTab = tabGroup.addTab({
+            title: "Welcome to Carbona!",
+            src: "page/welcome.html",
+            active: true
+        })
+
+        tabGroup.addTab({
+            title: "Testing Tab Style",
+            src: "page/welcome.html",
+            active: false
+        })
+        tabGroup.addTab({
+            title: "another tab test",
+            src: "page/welcome.html",
+            active: false
+        })
+
+    </script>
+</body>
+</html>
